@@ -1,0 +1,38 @@
+<!-- Sure, here's a simple HTML code example to create a temperature converter from Celsius to Fahrenheit using JavaScript:
+
+html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <p>Enter the temperature in Celsius:</p>
+    <input type="text" id="celsiusInput">
+    <button onclick="convertTemperature()">Convert</button>
+    <p id="result"></p>
+
+    <script>
+        function convertTemperature() {
+            // Get the Celsius input value
+            var celsius = parseFloat(document.getElementById("celsiusInput").value);
+            
+            // Check if the input is a valid number
+            if (!isNaN(celsius)) {
+                // Convert Celsius to Fahrenheit
+                var fahrenheit = (celsius * 9/5) + 32;
+                
+                // Display the result
+                document.getElementById("result").innerHTML = celsius + "°C is " + fahrenheit.toFixed(2) + "°F";
+            } else {
+                // Display an error message for invalid input
+                document.getElementById("result").innerHTML = "Please enter a valid temperature in Celsius.";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- This code creates a simple web page with an input field for entering the temperature in Celsius. When the "Convert" button is clicked, it converts the entered temperature to Fahrenheit and displays the result. Make sure to save this code as an HTML file and open it in a web browser to use the temperature converter. -->
